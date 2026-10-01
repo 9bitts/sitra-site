@@ -227,3 +227,24 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sand);outline-offse
  .hero-tile-main:after,.human-image:after,.growth-note:after,.personal-visual:after,.corporate-hero-image:after,.people-image:after,.services-hero-mosaic .sector-tile-main:after,.services-closing-photo:after,.visual-strip-grid figure:after,.service-image-rail figure:after,.service-detail-image:not(.service-symbol-panel):after,.service-detail-image.service-symbol-panel:before,.personal-gallery-grid .symbol-card .symbol-card-icon{width:44px;height:44px;top:12px;left:12px;background-size:22px 22px}
  .human-image:hover,.growth-note:hover,.personal-visual:hover,.corporate-hero-image:hover,.about-hero-image:hover,.location-photo:hover,.visual-strip-grid figure:hover,.people-image:hover,.service-detail-image:hover,.services-hero-mosaic:hover{transform:none}
 }
+
+.credential-list{margin:18px 0 0;padding:0;list-style:none}
+.credential-list li{position:relative;padding:12px 0 12px 16px;border-top:1px solid var(--line);font-size:14px;line-height:1.5}
+.credential-list li:before{content:"";position:absolute;left:0;top:20px;width:6px;height:6px;border-radius:50%;background:var(--sand)}
+.therapy-section{padding:10px clamp(24px,7vw,110px) 90px}
+.therapy-section h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4vw,56px);color:var(--green);letter-spacing:-.03em;line-height:1.05;margin:12px 0 8px;max-width:720px}
+.therapy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.therapy-card{background:#fff;border:1px solid rgba(23,74,67,.1);border-radius:22px;padding:26px 24px 22px;box-shadow:0 10px 28px rgba(15,51,47,.05)}
+.therapy-card span{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--green-soft);margin-bottom:10px}
+.therapy-card h3{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--green);margin:0 0 10px;letter-spacing:-.03em}
+.therapy-card p{font-size:14px;line-height:1.55;margin:0}
+.faq-wrap{margin-top:64px}
+.faq-wrap h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4vw,52px);color:var(--green);letter-spacing:-.03em;margin:0 0 22px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-list details{background:#fff;border:1px solid rgba(23,74,67,.1);border-radius:18px;padding:0 22px}
+.faq-list summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--green);padding:18px 28px 18px 0;list-style:none;position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";position:absolute;right:0;top:14px;font-family:var(--serif);font-size:26px;font-weight:400;color:var(--green-soft)}
+.faq-list details[open] summary:after{content:"–"}
+.faq-list details p{margin:0 0 18px;font-size:15px;line-height:1.55;max-width:720px}
+@media(max-width:900px){.therapy-grid,.content-grid{grid-template-columns:1fr;gap:22px}}
