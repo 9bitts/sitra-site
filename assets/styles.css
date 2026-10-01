@@ -198,3 +198,32 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sand);outline-offse
  .service-detail-image{margin:12px 12px 0}
  .corporate-people,.services-closing{padding:10px}
 }
+
+/* V25 — fotos em destaque, com ícone e sombra */
+.human-image,.growth-note,.personal-visual,.corporate-hero-image,.about-hero-image,.location-photo,.founder-profile-image,.visual-strip-grid figure,.service-image-rail figure,.personal-gallery-grid .symbol-card,.services-closing-photo,.people-image,.service-detail-image,.services-hero-mosaic,.hero-visual,.hero-mosaic{position:relative}
+.human-image,.growth-note,.personal-visual,.corporate-hero-image,.about-hero-image,.location-photo,.visual-strip-grid figure,.service-image-rail figure,.personal-gallery-grid .symbol-card,.services-closing-photo,.people-image,.service-detail-image,.services-hero-mosaic,.hero-visual,.hero-mosaic{box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),0 16px 34px rgba(15,51,47,.16),0 40px 72px rgba(15,51,47,.14);transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.human-image:hover,.growth-note:hover,.personal-visual:hover,.corporate-hero-image:hover,.about-hero-image:hover,.location-photo:hover,.visual-strip-grid figure:hover,.service-image-rail figure:hover,.personal-gallery-grid .symbol-card:hover,.services-closing-photo:hover,.people-image:hover,.service-detail-image:hover,.services-hero-mosaic:hover{transform:translateY(-6px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.45),0 22px 44px rgba(15,51,47,.2),0 48px 90px rgba(15,51,47,.16)}
+
+.hero-tile-main:after,.human-image:after,.growth-note:after,.personal-visual:after,.corporate-hero-image:after,.people-image:after,.services-hero-mosaic .sector-tile-main:after,.services-closing-photo:after,.visual-strip-grid figure:after,.service-image-rail figure:after,.service-detail-image:not(.service-symbol-panel):after,.service-detail-image.service-symbol-panel:before{content:"";position:absolute;z-index:4;top:16px;left:16px;width:52px;height:52px;border-radius:50%;background:#fff url("icons/health.svg") center/26px 26px no-repeat;box-shadow:0 10px 24px rgba(15,51,47,.24),0 0 0 1px rgba(217,199,165,.95);pointer-events:none}
+.growth-note:after,.services-hero-mosaic .sector-tile-main:after,#pgr-ltcat .service-detail-image:after,#in-loco .service-detail-image:after,#ltcat .service-symbol-panel:before{background-image:url("icons/pgr.svg")}
+.human-image:after,.people-image:after,#exames .service-detail-image:after,.service-image-rail figure:first-child:after{background-image:url("icons/consulta.svg")}
+.personal-visual:after,#saude-integral .service-detail-image:after,.visual-strip-grid figure:first-child:after{background-image:url("icons/acupuntura.svg")}
+.visual-strip-grid figure:nth-child(2):after,.visual-strip-grid figure:nth-child(3):after{background-image:url("icons/integrativas.svg")}
+.visual-strip-grid figure:nth-child(4):after,.services-closing-photo:after{background-image:url("icons/health.svg")}
+.corporate-hero-image:after,#treinamentos .service-detail-image:after{background-image:url("icons/office.svg")}
+.service-image-rail figure:last-child:after{background-image:url("icons/pgr.svg")}
+#pcmso .service-symbol-panel:before{background-image:url("icons/pcmso.svg")}
+#parecer .service-symbol-panel:before{background-image:url("icons/parecer.svg")}
+#psicossocial .service-symbol-panel:before{background-image:url("icons/psicossocial.svg")}
+
+.personal-gallery-grid .symbol-card .symbol-card-icon{display:grid!important;place-items:center;position:absolute;z-index:3;top:14px;left:14px;width:52px;height:52px;margin:0;border-radius:50%;background:#fff;box-shadow:0 10px 24px rgba(15,51,47,.24),0 0 0 1px rgba(217,199,165,.95)}
+.personal-gallery-grid .symbol-card .symbol-card-icon img{width:26px;height:26px;display:block}
+
+.founder-profile-image.founder-symbol{display:grid!important;place-items:center;min-height:420px;background:radial-gradient(circle at 50% 36%,rgba(217,199,165,.38),transparent 46%),linear-gradient(165deg,#2f756a 0%,#174a43 52%,#0f332f 100%)!important}
+.founder-symbol img{position:relative;z-index:1;width:128px!important;height:128px!important;max-width:none;filter:brightness(0) invert(1);opacity:.96}
+.founder-symbol:after{content:"Foto do fundador";position:absolute;left:0;right:0;bottom:22px;height:auto;min-height:0;display:block;place-items:unset;background:none;color:rgba(255,255,255,.78);font-size:10px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+
+@media(max-width:900px){
+ .hero-tile-main:after,.human-image:after,.growth-note:after,.personal-visual:after,.corporate-hero-image:after,.people-image:after,.services-hero-mosaic .sector-tile-main:after,.services-closing-photo:after,.visual-strip-grid figure:after,.service-image-rail figure:after,.service-detail-image:not(.service-symbol-panel):after,.service-detail-image.service-symbol-panel:before,.personal-gallery-grid .symbol-card .symbol-card-icon{width:44px;height:44px;top:12px;left:12px;background-size:22px 22px}
+ .human-image:hover,.growth-note:hover,.personal-visual:hover,.corporate-hero-image:hover,.about-hero-image:hover,.location-photo:hover,.visual-strip-grid figure:hover,.people-image:hover,.service-detail-image:hover,.services-hero-mosaic:hover{transform:none}
+}
